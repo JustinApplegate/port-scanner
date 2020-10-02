@@ -20,10 +20,13 @@ To remove the binary file after being compiled and run, use this command:
 `make clean`
 
 ## Scan all ports
-This option scans all TCP ports from 1-65000. All successful connections are pushed into a vector, where all the results are printed at the END of the scan. This scan takes approximately 2 minutes. 
+This option scans all TCP ports from 1-65535. All successful connections are pushed into a vector, where all the results are printed at the END of the scan. This scan takes approximately 3 minutes. 
 
 ## Scan a specific port
 After choosing this option, you will specify a specific port number, and the terminal will take up to 2 seconds to output the response. 
 
 ## Scan all common ports
-There is a list of 328 ports in the function ScanCommonPorts that are commonly used. The service they are used for is listed in a short comment on the same line as the port number. This scan takes approximately 10 seconds to run. 
+There is a list of 328 ports in the function ScanCommonPorts that are commonly used. The service they are used for is listed in a short comment on the same line as the port number. This scan takes approximately 2 seconds to run. 
+
+## How it works
+This port scanner uses multithreading and uses approximately 1000 ports at a time to test the connection to the desired port. The timeout is set to 2 seconds. 

@@ -138,6 +138,16 @@ void ScanAllPorts(std::string hostNameArg) {
     portTests = {};
   }
 
+  for (int i = 1; i <= 535; i++) {
+    portTests.push_back(new std::thread(ThreadTask, &buffer, hostNameArg, i+65000));
+  }
+  for (int i = 0; i < 535; i++) {
+    portTests.at(i)->join();
+  }
+  for (int i = 0; i < 535; i++) {
+    delete portTests.at(i);
+  }
+
   /*
     sort the buffer (eventually)
   */
