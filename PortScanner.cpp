@@ -553,7 +553,7 @@ void ScanCommonPorts(std::string hostNameArg) {
 
 int main(int argc, char* argv[]){
     
-    //get the hostname or IP address from user input
+    //get the IP address from user input
     std::string hostname;
 
     if (argc > 1) {
