@@ -1,6 +1,5 @@
 /*
 - How to turn URLs into IP addresses?
-- (eventually) sort the buffer the most efficient way possible (ScanCommonPorts and ScanAllPorts)
 */
 
 #include <sys/time.h>
@@ -16,6 +15,7 @@
 #include <vector>
 #include <thread>
 #include <mutex>
+#include <bits/stdc++.h>
 
 std::mutex bufferLock;
 
@@ -148,9 +148,7 @@ void ScanAllPorts(std::string hostNameArg) {
     delete portTests.at(i);
   }
 
-  /*
-    sort the buffer (eventually)
-  */
+  std::sort(buffer.begin(), buffer.end());
 
   //print out the list of all the open ports
   if (buffer.size()==0) {
@@ -546,9 +544,7 @@ void ScanCommonPorts(std::string hostNameArg) {
     portTests.at(i).join();
   }
 
-  /*
-    sort the buffer (eventually)
-  */
+  std::sort(buffer.begin(), buffer.end());
 
   //print out the list of all the open ports
   if (buffer.size()==0) {
