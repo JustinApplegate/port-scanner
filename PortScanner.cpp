@@ -526,6 +526,7 @@ void ScanCommonPorts(std::string hostNameArg) {
     24800, //Synergy
     25999, //Xfire
     27015, //Half-Life
+    27017, //MongoDB
     27374, //Sub7
     28960, //Call of Duty
     31337}; //Back Orifice
