@@ -1,5 +1,4 @@
 all:
-	g++ -pthread -o PortScanner PortScanner.cpp
-	./PortScanner $(arguments)
+	g++ -pthread -o scanner PortScanner.cpp
 clean:
 	rm PortScanner

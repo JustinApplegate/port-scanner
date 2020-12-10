@@ -7,13 +7,17 @@ This is my version of a Port Scanner in C++. It's written to be used in the Linu
 
 Specifying the option and subsequent choices can be done while running the binary file or using the makefile. 
 
-To use the makefile, run this in the terminal:
+To compile the program with the makefile, enter this command into the terminal:
 
 `make`
 
+To run the program, enter this command into the terminal (after compiling):
+
+`./scanner`
+
 OR
 
-`make arguments="[IP address] [option #]"`
+`./scanner [IP address] [option #]`
 
 To remove the binary file after being compiled and run, use this command:
 
